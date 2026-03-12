@@ -15,13 +15,13 @@ const config = {
 };
 
 // Endpoint para leer Recetas 
-app.get("/Recetas", async (req, res) => {
+app.get("/RECETAS", async (req, res) => {
   try {
     const pool = await sql.connect(config);
 
     const result = await pool.request().query(`
       SELECT MATNR_PADRE, DESC_PADRE, WERKS, MATNR_COMPONENTE, MENGE, MEINS, BMENG,BMEIN
-      FROM Recetas
+      FROM RECETAS
     `);
 
     res.setHeader("Access-Control-Allow-Origin", "*");
