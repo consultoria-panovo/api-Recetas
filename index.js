@@ -20,7 +20,7 @@ app.get("/RECETAS", async (req, res) => {
     const pool = await sql.connect(config);
 
     const result = await pool.request().query(`
-      SELECT MATNR_PADRE, DESC_PADRE, WERKS, MATNR_COMPONENTE, MENGE, MEINS, BMENG,BMEIN,STKOZ,STLAL, 
+      SELECT MATNR_PADRE, DESC_PADRE, WERKS, MATNR_COMPONENTE, MENGE, MEINS, BMENG,BMEIN,STKOZ,STLAL 
       FROM RECETAS
     `);
 
